@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DMstars — Checkout</title>
+  <style>
+    :root{ --brand:#A23B2B; --bg:#FFF8F3; --card:#fff; --text:#2A2A2A; --accent:#6B2E2E; }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:'Poppins',sans-serif; background:var(--bg); color:var(--text)}
+    header{background:#A23B2B; color:#fff; padding:16px}
+    .wrap{max-width:1100px; margin:0 auto; padding:0 18px}
+    nav{background:#F6C6B3; display:flex; gap:18px; justify-content:center; padding:10px}
+    nav a{color:#6B2E2E; text-decoration:none; font-weight:600}
+    nav a:hover{text-decoration:underline}
+    main{max-width:1100px; margin:0 auto; padding:24px 18px; display:grid; grid-template-columns:2fr 1fr; gap:18px}
+    .card{background:#fff; border:1px solid #eee; border-radius:14px; padding:14px; box-shadow:0 8px 18px rgba(0,0,0,.06)}
+    label{display:block; font-weight:600; margin:10px 0 6px}
+    input, select, textarea{width:100%; padding:12px; border:1px solid #ddd; border-radius:10px; background:#fff}
+    textarea{min-height:90px}
+    .btn{display:block; width:100%; padding:12px 16px; border:none; border-radius:10px; background:var(--brand); color:#fff; font-weight:700; text-align:center; text-decoration:none; margin-top:12px}
+    .btn:hover{background:#8E2F21}
+    .totals p{display:flex; justify-content:space-between; margin:8px 0}
+    @media (max-width: 860px){ main{grid-template-columns:1fr} }
+    footer{background:#A23B2B; color:#fff; text-align:center; padding:12px; margin-top:22px}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><strong>DM⭐⭐⭐</strong></div></header>
+   <nav>
+    <a href="dmhome1.html">Home</a>
+        <a href="dmproduct.html">Products</a>
+        <a href="dmsignin.html">Sign In</a>
+        <a href="dm signup.html">Sign Up</a>
+        <a href="dmcontact.html">Contact</a>
+        <a href="dmkart.html">Cart</a>
+        <a href="dmcheckout.html">Checkout</a>  
+        <a href="dmtrack.html">Track Order</a>
+  </nav>
+
+  <main>
+    <section class="card">
+      <h2 style="margin-top:0">Delivery Details</h2>
+      #
+        <label>Full Name</label>
+        <input name="name" placeholder="Your Name" required>
+
+        <label>Phone</label>
+        <input name="phone" type="tel" placeholder="+91 XXXXX XXXXX" required>
+
+        <label>City</label>
+        <select name="city" required>
+          <option>Ghaziabad</option>
+          <option>Noida</option>
+          <option>Delhi</option>
+          <option>Gurugram</option>
+          <option>Faridabad</option>
+          <option>Other</option>
+        </select>
+
+        <label>Address</label>
+        <textarea name="address" placeholder="House no., Street, Area" required></textarea>
+
+        <label>Delivery Slot</label>
+        <select name="slot" required>
+          <option>Today 12:00–3:00 PM (order before 11 AM)</option>
+          <option>Today 4:00–7:00 PM (order before 2 PM)</option>
+          <option>Tomorrow 10:00 AM–1:00 PM</option>
+          <option>Custom Date & Time (we will confirm)</option>
+        </select>
+
+        <label>Payment Method</label>
+        <select name="payment" required>
+          <option>Cash on Delivery</option>
+          <option>UPI</option>
+          <option>Card</option>
+        </select>
+
+        <label>Order Notes (optional)</label>
+        <textarea name="notes" placeholder="Cake message, eggless, shape, etc."></textarea>
+
+        <button class="btn" type="submit">Place Order</button>
+      </form>
+    </section>
+
+    <aside class="card">
+      <h3 style="margin-top:0">Summary</h3>
+      <div class="totals">
+        <p><span>Chocolate Truffle × 1</span><span>₹899</span></p>
+        <p><span>Red Velvet × 1</span><span>₹999</span></p>
+        <hr style="border:none; border-top:1px solid #eee; margin:8px 0">
+        <p><span>Subtotal</span><span>₹1,898</span></p>
+        <p><span>Delivery (Ghaziabad)</span><span>₹0</span></p>
+        <p><span><strong>Total</strong></span><span><strong>₹1,898</strong></span></p>
+      </div>
+      <a href="dmtrack.html">Go to Track Order</a>
+    </aside>
+  </main>
+
+  <footer>&copy; 2025 DMstars — Ghaziabad & NCR</footer>
+</body>
+</html>

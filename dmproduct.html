@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DMstars — Products</title>
+  <style>
+    :root{ 
+      --brand:#A23B2B; 
+      --bg:#FFF8F3; 
+      --card:#fff; 
+      --text:#2A2A2A; 
+      --accent:#6B2E2E; }
+    *{box-sizing:border-box}
+    body{
+       margin:0;
+       font-family:'Poppins',sans-serif;
+       background:var(--bg); 
+       color:var(--text)
+      }
+    header{
+      background:#A23B2B;
+      color:#fff; 
+      padding:16px;
+    }
+    .wrap{
+      max-width:1100px; 
+      margin:0 auto; 
+      padding:0 18px;
+    }
+    nav{
+      background:#F6C6B3; 
+      display:flex; 
+      gap:18px; 
+      justify-content:center; 
+      padding:10px;}
+    nav a{
+      color:#6B2E2E; 
+      text-decoration:none; 
+      font-weight:600;
+    }
+    nav a:hover{text-decoration:underline}
+    h1{
+      font-family:'Playfair Display',serif; 
+      color:#A23B2B; 
+      text-align:center; 
+      margin:20px 0;
+    }
+    .grid{
+      display:grid; 
+      grid-template-columns:repeat(3, 1fr); 
+      gap:18px;
+    }
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr 1fr} }
+    @media (max-width: 560px){ .grid{grid-template-columns:1fr} }
+    .card{
+      background:#fff; 
+      border:1px solid #eee; 
+      border-radius:14px; 
+      overflow:hidden; 
+      box-shadow:0 8px 18px rgba(0,0,0,.06);
+    }
+    .card img{
+      width:100%; 
+      height:200px; 
+      object-fit:cover;
+    }
+    .card .p{padding:14px}
+    .card h3{
+      margin:6px 0 8px; 
+      color:var(--brand);
+    }
+    .price{
+      font-weight:700; 
+      color:var(--brand);
+    }
+    .badge{display:inline-block; background:#F6C6B3; color:#6B2E2E; padding:4px 10px; border-radius:999px; font-size:.85rem; font-weight:700}
+    .actions{display:flex; gap:8px; padding:14px}
+    .btn{flex:1; padding:10px 12px; border:none; border-radius:10px; font-weight:600; cursor:pointer}
+    .primary{background:var(--brand); color:#fff}
+    .outline{background:#fff; border:1px solid #ddd}
+    .note{color:#777; text-align:center; font-size:.9rem; margin:10px 0}
+    footer{background:#A23B2B; color:#fff; text-align:center; padding:12px; margin-top:22px}
+    button {
+    background: #A23B2B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <strong>DM⭐⭐⭐</strong>
+    </div>
+  </header>
+
+  <nav>
+    <a href="dmhome1.html">Home</a>
+        <a href="dmproduct.html">Products</a>
+        <a href="dmsignin.html">Sign In</a>
+        <a href="dm signup.html">Sign Up</a>
+        <a href="dmcontact.html">Contact</a>
+        <a href="dmkart.html">Cart</a>
+        <a href="dmcheckout.html">Checkout</a>  
+        <a href="dmtrack.html">Track Order</a>
+  </nav>
+
+  <main class="wrap">
+    <h1>Our Cakes</h1>
+
+    <section class="grid">
+      <!-- Product 1 -->
+      <article class="card">
+        <img src="https://bluebowlrecipes.com/wp-content/uploads/2023/08/chocolate-truffle-cake-8844-500x375.jpg" alt="Chocolate Truffle Cake">
+        <div class="p">
+          <span class="badge">Bestseller</span>
+          <h3>Chocolate Truffle Cake</h3>
+          <p>Rich layers with velvety ganache.</p>
+          <p class="price">₹699</p>
+
+        </div>
+        <div class="actions">
+        <button onclick="location.href='dmcostumisation.html'">Customize your order</button>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFqoa2w6El8HtYiiEuHmP1komoNOxvYM-jSw&s" alt="Red Velvet Cake">
+        <div class="p">
+          <span class="badge">Top Rated</span>
+          <h3>Red Velvet Cream Cake</h3>
+          <p>Classic with cream cheese frosting.</p>
+          <p class="price">₹999</p>
+        </div>
+        <div class="actions">
+        <button onclick="location.href='dmcostumisation.html'">Customize your order</button>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="card">
+        <img src="https://2.imimg.com/data2/YL/BP/MY-3394833/pineapple-cake-fresh-cream.jpg" alt="Pineapple Fresh Cake">
+        <div class="p">
+          <h3>Pineapple Fresh Cake</h3>
+          <p>Soft sponge with fresh pineapple cream.</p>
+          <p class="price">₹749</p>
+        </div>
+        <div class="actions">
+        <button onclick="location.href='dmcostumisation.html'">Customize your order</button>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="card">
+       <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/08/eggless-black-forest-cake.webp" alt="Eggless Black Forest Cake">
+        <div class="p">
+          <h3>Eggless Black Forest</h3>
+          <p>Cherry, cream & chocolate shavings.</p>
+          <p class="price">₹799</p>
+        </div>
+        <div class="actions">
+        <button onclick="location.href='dmcostumisation.html'">Customize your order</button>
+        </div>
+      </article>
+
+      <!-- Product 5 -->
+      <article class="card">
+        <img src="https://sahnibakery.com/cdn/shop/products/CRUNCHYBUTTERSCOTCH549A@2x.jpg?v=1609400887" alt="Butterscotch Crunch Cake">
+        <div class="p">
+          <h3>Butterscotch Crunch</h3>
+          <p>Caramel bits with crunchy praline.</p>
+          <p class="price">₹699</p>
+        </div>
+        <div class="actions">
+        <button onclick="location.href='dmcostumisation.html'">Customize your order</button>
+        </div>
+      </article>
+
+      <!-- Product 6 -->
+      <article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7xw99WMEojrf0MbHpb6N_jiPlH3DvPVCqnQ&s" alt="Seasonal Fruit Medley Cake">
+        <div class="p">
+          <span class="badge">New</span>
+          <h3>Seasonal Fruit Medley</h3>
+          <p>Fresh fruits atop premium cream.</p>
+          <p class="price">₹1099</p>
+        </div>
+       <div class="actions">
+        <button onclick="location.href='dmcostumisation.html'">Customize your order</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>&copy; 2025 DMstars — Ghaziabad & NCR</footer>
+</body>
+</html>

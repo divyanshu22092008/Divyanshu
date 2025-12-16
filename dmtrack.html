@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DMstars — Track Order</title>
+  <style>
+    :root{ --brand:#A23B2B; --bg:#FFF8F3; --card:#fff; --text:#2A2A2A; --accent:#6B2E2E; }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:'Poppins',sans-serif; background:var(--bg); color:var(--text)}
+    header{background:#A23B2B; color:#fff; padding:16px}
+    .wrap{max-width:1100px; margin:0 auto; padding:0 18px}
+    nav{background:#F6C6B3; display:flex; gap:18px; justify-content:center; padding:10px}
+    nav a{color:#6B2E2E; text-decoration:none; font-weight:600}
+    nav a:hover{text-decoration:underline}
+    main{max-width:1100px; margin:0 auto; padding:24px 18px; display:grid; grid-template-columns:1.2fr 1fr; gap:18px}
+    .card{background:#fff; border:1px solid #eee; border-radius:14px; padding:14px; box-shadow:0 8px 18px rgba(0,0,0,.06)}
+    label{display:block; font-weight:600; margin:10px 0 6px}
+    input{width:100%; padding:12px; border:1px solid #ddd; border-radius:10px; background:#fff}
+    .btn{display:inline-block; padding:12px 16px; border:none; border-radius:10px; background:var(--brand); color:#fff; font-weight:700; text-decoration:none; margin-top:12px}
+    .btn:hover{background:#8E2F21}
+    .status{display:flex; gap:10px; margin-top:10px; flex-wrap:wrap}
+    .step{background:#FFEDE3; color:#6B2E2E; padding:8px 12px; border-radius:999px; font-weight:700}
+    table{width:100%; border-collapse:collapse; margin-top:10px}
+    th,td{border-bottom:1px solid #eee; padding:8px; text-align:left}
+    @media (max-width: 860px){ main{grid-template-columns:1fr} }
+    footer{background:#A23B2B; color:#fff; text-align:center; padding:12px; margin-top:22px}
+    button{padding:10px 14px; border:none; border-radius:10px; background:var(--brand); color:#fff; font-weight:700; text-decoration:none}
+    button:hover{background:#8E2F21}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><strong>DM⭐⭐⭐</strong></div></header>
+    <nav>
+        <a href="dmhome1.html">Home</a>
+        <a href="dmproduct.html">Products</a>
+        <a href="dmsignin.html">Sign In</a>
+        <a href="dm signup.html">Sign Up</a>
+        <a href="dmcontact.html">Contact</a>
+        <a href="dmkart.html">Cart</a>
+        <a href="dmcheckout.html">Checkout</a>  
+        <a href="dmtrack.html">Track Order</a>
+  </nav>
+
+
+  <main>
+    <section class="card">
+      <h2 style="margin-top:0">Track your order</h2>
+      #
+        <label>Enter Order ID</label>
+        <input name="id" placeholder="e.g., DMABC123" required>
+        <button class="btn" type="submit">Track</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h3 style="margin-top:0">Example Order</h3>
+      <p style="color:#555">Order <strong>DMABC123</strong> — Divyanshu Maurya — Ghaziabad — <strong>₹1,898</strong> — 05 Dec 2025, 10:00 AM</p>
+      <div class="status">
+        <div class="step">✅ Processing</div>
+        <div class="step">✅ Baking</div>
+        <div class="step">✅ Out for Delivery</div>
+        <div class="step">Delivered</div>
+      </div>
+      <table>
+        <tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr>
+        <tr><td>Chocolate Truffle Cake</td><td>1</td><td>₹899</td><td>₹899</td></tr>
+        <tr><td>Red Velvet Cream Cake</td><td>1</td><td>₹999</td><td>₹999</td></tr>
+      </table>
+      <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap">
+        #Cancel (Disabled)</a>
+        <button onclick="location.href='dmproduct.html'">Order Again</a></button>
+      </div>
+    </section>
+  </main>
+
+  <footer>&copy; 2025 DMstars — Ghaziabad & NCR</footer>
+</body>
+</html>

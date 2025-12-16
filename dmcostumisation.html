@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DMstars — Customize Your Cake</title>
+  <style>
+    :root{
+      --brand:#A23B2B; --bg:#FFF8F3; --card:#fff; --text:#2A2A2A; --accent:#6B2E2E;
+      --line:#eee; --muted:#777;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:'Poppins',sans-serif; background:var(--bg); color:var(--text)}
+    header{background:#A23B2B; color:#fff; padding:16px}
+    .wrap{max-width:1100px; margin:0 auto; padding:0 18px}
+    nav{background:#F6C6B3; display:flex; gap:18px; justify-content:center; padding:10px}
+    nav a{color:#6B2E2E; text-decoration:none; font-weight:600}
+    nav a:hover{text-decoration:underline}
+
+    main{max-width:1100px; margin:0 auto; padding:24px 18px; display:grid; grid-template-columns: 1.7fr 1fr; gap:18px}
+    @media (max-width: 900px){ main{grid-template-columns:1fr} }
+
+    .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; box-shadow:0 8px 18px rgba(0,0,0,.06)}
+    h1{font-family:'Playfair Display',serif; color:var(--brand); margin:14px 0}
+    h2{margin:10px 0 2px}
+    h3{margin:8px 0 6px; color:var(--brand)}
+    .muted{color:var(--muted)}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    @media (max-width: 600px){ .row{grid-template-columns:1fr} }
+
+    label{display:block; font-weight:600; margin:10px 0 6px}
+    .hint{font-size:.9rem; color:var(--muted); margin-top:4px}
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="time"], input[type="number"], select, textarea {
+      width:100%; padding:12px; border:1px solid #ddd; border-radius:10px; background:#fff;
+    }
+    textarea{min-height:100px}
+
+    .options{display:flex; flex-wrap:wrap; gap:10px}
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border:1px solid #ddd; border-radius:999px; background:#fff; cursor:pointer;
+      font-weight:600; color:#333;
+    }
+    .chip input{accent-color:var(--brand)}
+
+    .swatch{
+      display:inline-flex; align-items:center; gap:8px; padding:10px 12px;
+      border:1px solid #ddd; border-radius:12px; background:#fff; cursor:pointer; font-weight:600;
+    }
+    .dot{width:18px; height:18px; border-radius:50%; border:1px solid #ccc}
+    .dot.choco{background:#5a3a2f}
+    .dot.straw{background:#ff5e7d}
+    .dot.van{background:#f3e5ab}
+    .dot.red{background:#b22222}
+    .dot.gold{background:#d4af37}
+    .dot.pastel{background:#f6c6b3}
+
+    .price-card{background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px}
+    .prices p{display:flex; justify-content:space-between; margin:8px 0}
+    .total{font-weight:800}
+    .btn{
+      display:block; width:100%; padding:12px 16px; border:none; border-radius:10px;
+      background:var(--brand); color:#fff; font-weight:700; text-align:center; text-decoration:none;
+      margin-top:12px;
+    }
+    .btn:hover{background:#8E2F21}
+
+    .preview{
+      border-radius:12px; overflow:hidden; margin-top:10px; border:1px solid var(--line);
+    }
+    .preview img{width:100%; height:220px; object-fit:cover}
+    .preview .p{padding:12px}
+    .badge{display:inline-block; background:#F6C6B3; color:#6B2E2E; padding:4px 10px; border-radius:999px; font-size:.85rem; font-weight:700}
+
+    footer{background:#A23B2B; color:#fff; text-align:center; padding:12px; margin-top:22px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap"><strong>DMstars</strong></div>
+  </header>
+
+  <nav>
+    <a href="dmhome1.html">Home</a>
+        <a href="dmproduct.html">Products</a>
+        <a href="dmsignin.html">Sign In</a>
+        <a href="dm signup.html">Sign Up</a>
+        <a href="dmcontact.html">Contact</a>
+        <a href="dmkart.html">Cart</a>
+        <a href="dmcheckout.html">Checkout</a>  
+        <a href="dmtrack.html">Track Order</a>
+  </nav>
+  <main>
+    <!-- Left: Customization Form (static) -->
+    <section class="card">
+      <h1>Customize Your Cake</h1>
+      <!-- Cake Base -->
+      <h3>1) Base & Size</h3>
+      <div class="row">
+        <div>
+          <label>Shape</label>
+          <div class="options" role="group" aria-label="Cake Shape">
+            <label class="chip"><input type="radio" name="shape" checked> Round</label>
+            <label class="chip"><input type="radio" name="shape"> Square</label>
+            <label class="chip"><input type="radio" name="shape"> Heart</label>
+            <label class="chip"><input type="radio" name="shape"> Photo</label>
+          </div>
+        </div>
+        <div>
+          <label>Size</label>
+          <select name="size" required>
+            <option>0.5 kg (Serves 4–6)</option>
+            <option selected>1 kg (Serves 8–10)</option>
+            <option>1.5 kg (Serves 12–14)</option>
+            <option>2 kg (Serves 16–20)</option>
+            <option>3 kg (Party)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Flavor & Egg -->
+      <h3>2) Flavour & Egg Preference</h3>
+      <div class="row">
+        <div>
+          <label>Flavour</label>
+          <div class="options" role="group" aria-label="Flavour">
+            <label class="chip"><input type="radio" name="flavour" checked> Chocolate</label>
+            <label class="chip"><input type="radio" name="flavour"> Red Velvet</label>
+            <label class="chip"><input type="radio" name="flavour"> Pineapple</label>
+            <label class="chip"><input type="radio" name="flavour"> Strawberry</label>
+            <label class="chip"><input type="radio" name="flavour"> Butterscotch</label>
+            <label class="chip"><input type="radio" name="flavour"> Vanilla</label>
+          </div>
+        </div>
+        <div>
+          <label>Egg Preference</label>
+          <div class="options" role="group" aria-label="Egg Preference">
+            <label class="chip"><input type="radio" name="egg" checked> Eggless</label>
+            <label class="chip"><input type="radio" name="egg"> With Egg</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fillings & Frosting -->
+      <h3>3) Fillings & Frosting</h3>
+      <div class="row">
+        <div>
+          <label>Fillings (choose any)</label>
+          <div class="options" role="group" aria-label="Fillings">
+            <label class="chip"><input type="checkbox" name="fill" checked> Choco Ganache</label>
+            <label class="chip"><input type="checkbox" name="fill"> Fruit Compote</label>
+            <label class="chip"><input type="checkbox" name="fill"> Praline Crunch</label>
+            <label class="chip"><input type="checkbox" name="fill"> Cream Cheese</label>
+          </div>
+        </div>
+        <div>
+          <label>Frosting</label>
+          <div class="options" role="group" aria-label="Frosting">
+            <label class="chip"><input type="radio" name="frost" checked> Fresh Cream</label>
+            <label class="chip"><input type="radio" name="frost"> Buttercream</label>
+            <label class="chip"><input type="radio" name="frost"> Ganache</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Theme & Color -->
+      <h3>4) Theme & Color Accents</h3>
+      <div class="row">
+        <div>
+          <label>Theme</label>
+          <select name="theme">
+            <option>Classic</option>
+            <option>Minimal</option>
+            <option>Floral</option>
+            <option>Kids (Cartoon)</option>
+            <option>Photo Print</option>
+            <option>Custom</option>
+          </select>
+        </div>
+        <div>
+          <label>Accent Colors</label>
+          <div class="options" role="group" aria-label="Accent Colors">
+            <label class="swatch"><span class="dot choco"></span> Chocolate</label>
+            <label class="swatch"><span class="dot straw"></span> Strawberry</label>
+            <label class="swatch"><span class="dot van"></span> Vanilla</label>
+            <label class="swatch"><span class="dot red"></span> Red</label>
+            <label class="swatch"><span class="dot gold"></span> Gold</label>
+            <label class="swatch"><span class="dot pastel"></span> Pastel</label>
+          </div>
+          <p class="hint">Choose accents to match the occasion or theme.</p>
+        </div>
+      </div>
+
+      <!-- Message & Photo -->
+      <h3>5) Message on Cake & Photo (optional)</h3>
+      <div class="row">
+        <div>
+          <label>Cake Message</label>
+          <input type="text" name="message" maxlength="40" placeholder="e.g., Happy Birthday, Aarav! (≤40 chars)">
+          <p class="hint">We’ll pipe this message neatly in your chosen style.</p>
+        </div>
+        <div>
+          <label>Upload Photo (for Photo Cake)</label>
+          <input type="file" name="photo" accept="image/*">
+          <p class="hint">High-resolution JPG/PNG recommended for best print quality.</p>
+        </div>
+      </div>
+
+      <!-- Delivery -->
+      <h3>6) Delivery Details</h3>
+      <div class="row">
+        <div>
+          <label>City</label>
+          <select name="city" required>
+            <option>Ghaziabad</option>
+            <option>Noida</option>
+            <option>Delhi</option>
+            <option>Gurugram</option>
+            <option>Faridabad</option>
+            <option>Other</option>
+          </select>
+          <p class="hint">Same-day delivery in Ghaziabad/NCR if ordered before 2 PM.</p>
+        </div>
+        <div>
+          <label>Preferred Delivery Date & Time</label>
+          <div class="row" style="grid-template-columns:1fr 1fr">
+            <input type="date" name="date" required>
+            <input type="time" name="time" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Info -->
+      <h3>7) Your Details</h3>
+      <div class="row">
+        <div>
+          <label>Full Name</label>
+          <input type="text" name="cust_name" placeholder="Your Name" required>
+        </div>
+        <div>
+          <label>Phone</label>
+          <input type="tel" name="cust_phone" placeholder="+91 XXXXX XXXXX" required>
+        </div>
+      </div>
+      <label>Delivery Address</label>
+      <textarea name="cust_address" placeholder="House no., Street, Area, Landmark" required></textarea>
+
+      <label>Special Instructions (optional)</label>
+      <textarea name="notes" placeholder="Allergic notes, design references, candle count, etc."></textarea>
+      <button class="btn" type="submit">Add to Cart</button>
+      
+    </section>
+
+    <!-- Right: Static Preview & Price -->
+    <aside class="card">
+      <h2 style="margin-top:0">Preview</h2>
+      <div class="preview">
+        <div class="p">
+          <span class="badge">Sample Preview</span>
+          <h3 style="margin:6px 0 4px">Round • 1 kg • Chocolate • Eggless</h3>
+          <p class="muted" style="margin:0">Frosting: Fresh Cream • Fillings: Ganache</p>
+        </div>
+      </div>
+
+      <h2>Estimated Price</h2>
+      <div class="price-card">
+        <div class="prices">
+          <p><span>Base (1 kg)</span><span>₹999</span></p>
+          <p><span>Eggless</span><span>₹50</span></p>
+          <p><span>Premium Filling</span><span>₹150</span></p>
+          <p><span>Theme Decoration</span><span>₹200</span></p>
+          <hr style="border:none; border-top:1px solid var(--line); margin:8px 0">
+          <p class="total"><span>Total (estimate)</span><span>₹1,399</span></p>
+        </div>
+        <p class="muted" style="margin-top:6px">Final price may vary by design complexity and delivery location.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer>&copy; 2025 DMstars — Ghaziabad & NCR</footer>
+</body>
+</html>
